@@ -1,0 +1,48 @@
+/* responsive.css - Responsive enhancements for Kishore Tech Solutions */
+
+@media (max-width: 1200px) {
+    :root {
+        --spacing-margin-desktop: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .mega-menu-dropdown:hover .mega-menu-container {
+        display: none; /* Hide hover mega menu on mobile/tablets */
+    }
+    
+    .mega-menu-container {
+        position: static;
+        box-shadow: none;
+        border: none;
+        padding: 1rem 0;
+        display: none;
+    }
+    
+    .mega-menu-container.show {
+        display: block;
+    }
+    
+    .nav-link.active::after {
+        display: none; /* Hide bottom line active indicator on mobile */
+    }
+    
+    .nav-link {
+        padding: 0.75rem 1rem !important;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --spacing-margin-desktop: 16px;
+    }
+    
+    .top-info-bar {
+        display: none !important; /* Hide top bar on mobile */
+    }
+    
+    .timeline-item {
+        margin-left: 3.5rem;
+    }
+}
