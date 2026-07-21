@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // 3. Mobile Navigation drawer behavior & Mega menu toggle on mobile
-    const megaMenuDropdown = document.querySelector('.mega-menu-dropdown');
-    if (megaMenuDropdown) {
-        const toggleBtn = megaMenuDropdown.querySelector('button') || megaMenuDropdown.querySelector('.nav-link');
-        const container = megaMenuDropdown.querySelector('.mega-menu-container');
+    const megaMenuDropdowns = document.querySelectorAll('.mega-menu-dropdown');
+    megaMenuDropdowns.forEach(dropdown => {
+        const toggleBtn = dropdown.querySelector('.dropdown-toggle') || dropdown.querySelector('.nav-link');
+        const container = dropdown.querySelector('.mega-menu-container');
         
         if (toggleBtn && container) {
             toggleBtn.addEventListener('click', (e) => {
@@ -40,5 +40,5 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }
-    }
+    });
 });
