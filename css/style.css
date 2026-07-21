@@ -130,8 +130,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mega-menu-container {
-    width: 46%;
-    left: 277px;
+    text-align: center;
+    width: 22%;
+    left: 670px;
     right: 0;
     padding: 1rem;
     border-radius: var(--border-radius-lg);
