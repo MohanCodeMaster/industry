@@ -15,6 +15,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+.service-card{cursor:pointer;transition:.3s}
+.service-card:hover{transform:translateY(-6px)}
+.service-card.active{background:#0d6efd!important}
+.service-card.active h3{color:#fff!important}
+#serviceDetails{animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+
 </head>
 <body>
 
@@ -232,6 +242,12 @@
                               
                                 </div>
                             </div>
+                            <hr class="my-5">
+<div id="serviceDetails" class="card shadow-sm border-0 d-none">
+<div class="card-body p-4">
+<h3 id="serviceTitle" class="text-primary mb-3"></h3>
+<div id="serviceContent"></div>
+</div></div>
                         </article>
 
                         <!-- Documentation -->
@@ -461,5 +477,28 @@
     <script src="js/scroll.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/form.js"></script>
+
+    <script>
+const services={
+"fire-fighting":{title:"Fire Fighting System Design & Installation",content:"<p>Complete fire protection solutions.</p><ul><li>Hydrant Systems</li><li>Sprinklers</li><li>Fire Pumps</li><li>Testing & Commissioning</li></ul>"},
+"fire-alarm":{title:"Fire Alarm System Installation",content:"<p>Design and installation of fire alarm systems.</p><ul><li>Smoke Detectors</li><li>Alarm Panels</li><li>Maintenance</li></ul>"},
+"solar":{title:"Solar Power System",content:"<p>Industrial and rooftop solar solutions.</p><ul><li>On-grid</li><li>Off-grid</li><li>Hybrid Systems</li></ul>"},
+"electrical":{title:"Electrical Works",content:"<p>Electrical installation services.</p><ul><li>HT/LT Works</li><li>Cable Laying</li><li>Panels</li></ul>"},
+"plumbing":{title:"Industrial Plumbing",content:"<p>Industrial plumbing solutions.</p><ul><li>Piping</li><li>Water Supply</li><li>Drainage</li></ul>"},
+"hvac":{title:"HVAC Coordination",content:"<p>HVAC installation and coordination.</p><ul><li>Ducting</li><li>Ventilation</li><li>AHU</li></ul>"},
+"ppe":{title:"Safety Signages & PPE Planning",content:"<p>Workplace safety planning.</p><ul><li>Safety Boards</li><li>PPE Planning</li><li>Emergency Layouts</li></ul>"}
+};
+document.querySelectorAll(".service-card").forEach(card=>{
+card.onclick=()=>{
+document.querySelectorAll(".service-card").forEach(c=>c.classList.remove("active"));
+card.classList.add("active");
+const s=services[card.dataset.service];
+document.getElementById("serviceTitle").innerHTML=s.title;
+document.getElementById("serviceContent").innerHTML=s.content;
+document.getElementById("serviceDetails").classList.remove("d-none");
+document.getElementById("serviceDetails").scrollIntoView({behavior:"smooth",block:"start"});
+};
+});
+</script>
 </body>
 </html>
