@@ -15,6 +15,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
+
+<style>
+.service-card{cursor:pointer;transition:.3s}
+.service-card:hover{transform:translateY(-6px)}
+.service-card.active{background:#0d6efd!important}
+.service-card.active h3{color:#fff!important}
+#serviceDetails{animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+
 </head>
 <body>
 
@@ -119,19 +129,19 @@
                             </div>
                             <div class="row g-4">
                                 <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="fire-fighting">
                                         <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Fire fighting system design & installation</h3>
                                         <!-- <p class="text-muted small">Preparation of Bankable Detailed Project Reports for financial closures.</p> -->
                                     </div>
                                 </div>
                                 <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="fire-alarm">
                                         <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Fire alarm system installation</h3>
                                         <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
                                     </div>
                                 </div>
                                 <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="solar">
                                         <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Solar power system</h3>
                                         <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
                                     </div>
@@ -139,19 +149,19 @@
                             </div>
                             <div class="row g-4">
                                 <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="electrical">
                                         <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Electrical works</h3>
                                       
                                     </div>
                                 </div>
                                 <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="plumbing">
                                         <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Industrial plumbing</h3>
                                         <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
                                     </div>
                                 </div>
                                 <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="hvac">
                                         <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">HVAC coordination</h3>
                                         <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
                                     </div>
@@ -160,18 +170,22 @@
 
                             <div class="row g-4">
                                 <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="ppe">
                                         <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Safety signages and PPE planning</h3>
                                         <!-- <p class="text-muted small">Preparation of Bankable Detailed Project Reports for financial closures.</p> -->
                                     </div>
                                 </div>
-                               
-                           
-
-                         
-                                </div>
                             </div>
-                        </article>
+                            </div>
+                        
+<hr class="my-5">
+<div id="serviceDetails" class="card shadow-sm border-0 d-none">
+<div class="card-body p-4">
+<h3 id="serviceTitle" class="text-primary mb-3"></h3>
+<div id="serviceContent"></div>
+</div></div>
+
+</article>
 
                         <!-- Documentation -->
                         <!-- <article class="custom-card p-4 border reveal" id="emp">
@@ -282,22 +296,13 @@
                                     <label class="form-label small text-uppercase text-white-50">Service Type (Required)*</label>
                                     <select class="form-select bg-white-10 border-0 text-dark" required>
                                         <option value="" disabled selected>Select Service</option>
-                                        <option>DPR (Detailed Project Report)</option>
-                                        <option>Land identification & feasibility</option>
-                                        <option>APIIC land application support</option>
-                                        <option>Single Desk Portal approvals</option>
-                                        <option>Company incorporation</option>
-                                        <option>Udyam (MSME) registration</option>
-                                        <option>PAN, TAN & GST registration</option>
-                                        <option>Factory plan approval</option>
-                                        <option>Building plan approval</option>
-                                        <option>Fire NOC</option>
-                                        <option>AP Pollution Control Board</option>
-                                        <option>Groundwater permission</option>
-                                        <option>Electricity connection (11/33 KV)</option>
-                                        <option>Water connection</option>
-                                        <option>Boiler approvals</option>
-                                        <option>Electrical Inspectorate approvals</option>
+                                        <option>Fire fighting system design & installation</option>
+                                        <option>Fire alarm system installation</option>
+                                        <option>Solar power system</option>
+                                        <option>Electrical works</option>
+                                        <option>Industrial plumbing</option>
+                                        <option>HVAC coordination</option>
+                                        <option>Safety signages and PPE planning</option>
                                     </select>
                                     <div class="invalid-feedback">Select an industry.</div>
                                 </div>
@@ -400,5 +405,29 @@
     <script src="js/scroll.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/form.js"></script>
+
+<script>
+const services={
+"fire-fighting":{title:"Fire Fighting System Design & Installation",content:"<p>Complete fire protection solutions.</p><ul><li>Hydrant Systems</li><li>Sprinklers</li><li>Fire Pumps</li><li>Testing & Commissioning</li></ul>"},
+"fire-alarm":{title:"Fire Alarm System Installation",content:"<p>Design and installation of fire alarm systems.</p><ul><li>Smoke Detectors</li><li>Alarm Panels</li><li>Maintenance</li></ul>"},
+"solar":{title:"Solar Power System",content:"<p>Industrial and rooftop solar solutions.</p><ul><li>On-grid</li><li>Off-grid</li><li>Hybrid Systems</li></ul>"},
+"electrical":{title:"Electrical Works",content:"<p>Electrical installation services.</p><ul><li>HT/LT Works</li><li>Cable Laying</li><li>Panels</li></ul>"},
+"plumbing":{title:"Industrial Plumbing",content:"<p>Industrial plumbing solutions.</p><ul><li>Piping</li><li>Water Supply</li><li>Drainage</li></ul>"},
+"hvac":{title:"HVAC Coordination",content:"<p>HVAC installation and coordination.</p><ul><li>Ducting</li><li>Ventilation</li><li>AHU</li></ul>"},
+"ppe":{title:"Safety Signages & PPE Planning",content:"<p>Workplace safety planning.</p><ul><li>Safety Boards</li><li>PPE Planning</li><li>Emergency Layouts</li></ul>"}
+};
+document.querySelectorAll(".service-card").forEach(card=>{
+card.onclick=()=>{
+document.querySelectorAll(".service-card").forEach(c=>c.classList.remove("active"));
+card.classList.add("active");
+const s=services[card.dataset.service];
+document.getElementById("serviceTitle").innerHTML=s.title;
+document.getElementById("serviceContent").innerHTML=s.content;
+document.getElementById("serviceDetails").classList.remove("d-none");
+document.getElementById("serviceDetails").scrollIntoView({behavior:"smooth",block:"start"});
+};
+});
+</script>
+
 </body>
 </html>

@@ -15,6 +15,16 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
+
+<style>
+.service-card{cursor:pointer;transition:.3s}
+.service-card:hover{transform:translateY(-6px)}
+.service-card.active{background:#0d6efd!important}
+.service-card.active h3{color:#fff!important}
+#serviceDetails{animation:fade .4s}
+@keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+</style>
+
 </head>
 <body>
 
@@ -91,9 +101,9 @@
                 <span class="material-symbols-outlined fs-6">chevron_right</span>
                 <span class="text-primary fw-bold">Services</span>
             </nav>
-            <h1 class="font-display-lg text-primary mb-3">Pre-Establishment Approvals</h1>
+            <h1 class="font-display-lg text-primary mb-3">Digital Services</h1>
             <p class="font-body-lg text-muted max-w-2xl">
-                End-to-end technical support for industrial ventures. From initial feasibility studies to final statutory approvals, we enable your growth with precision and expertise.
+                Streamline your industrial journey with our complete digital support services. From planning to final approvals, we ensure your project moves forward smoothly and efficiently.
             </p>
         </div>
     </section>
@@ -113,126 +123,63 @@
                                     <span class="material-symbols-outlined fs-2">architecture</span>
                                 </div>
                                 <div>
-                                    <h2 class="font-headline-lg text-primary mb-2">Pre-Establishment Services</h2>
+                                    <h2 class="font-headline-lg text-primary mb-2">Digital Services</h2>
                                     <!-- <p class="text-muted mb-0">Expert guidance on project viability and economic frameworks.</p> -->
                                 </div>
                             </div>
                             <div class="row g-4">
                                 <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">DPR (Detailed Project Report)</h3>
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="fire-fighting">
+                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Industrial website development</h3>
                                         <!-- <p class="text-muted small">Preparation of Bankable Detailed Project Reports for financial closures.</p> -->
                                     </div>
                                 </div>
                                 <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Land identification & feasibility</h3>
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="fire-alarm">
+                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">ERP & CRM implementation</h3>
                                         <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
                                     </div>
                                 </div>
                                 <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">APIIC land application support</h3>
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="solar">
+                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">HRMS solutions</h3>
                                         <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
                                     </div>
                                 </div>
                             </div>
                             <div class="row g-4">
                                 <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Single Desk Portal approvals</h3>
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="electrical">
+                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Digital marketing</h3>
                                       
                                     </div>
                                 </div>
                                 <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Company incorporation</h3>
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="plumbing">
+                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">LinkedIn company branding</h3>
                                         <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
                                     </div>
                                 </div>
                                 <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Udyam (MSME) registration</h3>
+                                    <div class="p-4 rounded bg-light hover-lift h-100 service-card" data-service="hvac">
+                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">AI-powered business automation</h3>
                                         <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row g-4">
-                                <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">PAN, TAN & GST registration</h3>
-                                        <!-- <p class="text-muted small">Preparation of Bankable Detailed Project Reports for financial closures.</p> -->
-                                    </div>
-                                </div>
-                                <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Factory plan approval</h3>
-                                        <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
-                                    </div>
-                                </div>
-                                <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Building plan approval</h3>
-                                        <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
-                                    </div>
-                                </div>
+                           
                             </div>
+                            
+                        
+<hr class="my-5">
+<div id="serviceDetails" class="card shadow-sm border-0 d-none">
+<div class="card-body p-4">
+<h3 id="serviceTitle" class="text-primary mb-3"></h3>
+<div id="serviceContent"></div>
+</div></div>
 
-                            <div class="row g-4">
-                                <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Fire NOC</h3>
-                                        <!-- <p class="text-muted small">Preparation of Bankable Detailed Project Reports for financial closures.</p> -->
-                                    </div>
-                                </div>
-                                <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">AP Pollution Control Board (Consent for Establishment)</h3>
-                                        <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
-                                    </div>
-                                </div>
-                                <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Groundwater permission</h3>
-                                        <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row g-4">
-                                <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Electricity connection (11/33 KV)</h3>
-                                        <!-- <p class="text-muted small">Preparation of Bankable Detailed Project Reports for financial closures.</p> -->
-                                    </div>
-                                </div>
-                                <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Water connection</h3>
-                                        <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
-                                    </div>
-                                </div>
-                                <div class="col-md-4 p-3" id="advisory">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Boiler approvals</h3>
-                                        <!-- <p class="text-muted small">In-depth TEV reports to assess project risks, capital output ratio, and sustainability.</p> -->
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row g-4">
-                                <div class="col-md-4 p-3" id="tev">
-                                    <div class="p-4 rounded bg-light hover-lift h-100">
-                                        <h3 class="font-headline-md text-primary mb-2" style="font-size: 1.125rem;">Electrical Inspectorate approvals</h3>
-                                        <!-- <p class="text-muted small">Preparation of Bankable Detailed Project Reports for financial closures.</p> -->
-                                    </div>
-                                </div>
-                               
-                              
-                                </div>
-                            </div>
-                        </article>
+</article>
 
                         <!-- Documentation -->
                         <!-- <article class="custom-card p-4 border reveal" id="emp">
@@ -343,22 +290,12 @@
                                     <label class="form-label small text-uppercase text-white-50">Service Type (Required)*</label>
                                     <select class="form-select bg-white-10 border-0 text-dark" required>
                                         <option value="" disabled selected>Select Service</option>
-                                        <option>DPR (Detailed Project Report)</option>
-                                        <option>Land identification & feasibility</option>
-                                        <option>APIIC land application support</option>
-                                        <option>Single Desk Portal approvals</option>
-                                        <option>Company incorporation</option>
-                                        <option>Udyam (MSME) registration</option>
-                                        <option>PAN, TAN & GST registration</option>
-                                        <option>Factory plan approval</option>
-                                        <option>Building plan approval</option>
-                                        <option>Fire NOC</option>
-                                        <option>AP Pollution Control Board</option>
-                                        <option>Groundwater permission</option>
-                                        <option>Electricity connection (11/33 KV)</option>
-                                        <option>Water connection</option>
-                                        <option>Boiler approvals</option>
-                                        <option>Electrical Inspectorate approvals</option>
+                                        <option>Industrial website development</option>
+                                        <option>ERP & CRM implementation</option>
+                                        <option>HRMS solutions</option>
+                                        <option>Digital marketing</option>
+                                        <option>LinkedIn company branding</option>
+                                        <option>AI-powered business automation</option>
                                     </select>
                                     <div class="invalid-feedback">Select an industry.</div>
                                 </div>
@@ -461,5 +398,29 @@
     <script src="js/scroll.js"></script>
     <script src="js/animation.js"></script>
     <script src="js/form.js"></script>
+
+<script>
+const services={
+"fire-fighting":{title:"Fire Fighting System Design & Installation",content:"<p>Complete fire protection solutions.</p><ul><li>Hydrant Systems</li><li>Sprinklers</li><li>Fire Pumps</li><li>Testing & Commissioning</li></ul>"},
+"fire-alarm":{title:"Fire Alarm System Installation",content:"<p>Design and installation of fire alarm systems.</p><ul><li>Smoke Detectors</li><li>Alarm Panels</li><li>Maintenance</li></ul>"},
+"solar":{title:"Solar Power System",content:"<p>Industrial and rooftop solar solutions.</p><ul><li>On-grid</li><li>Off-grid</li><li>Hybrid Systems</li></ul>"},
+"electrical":{title:"Electrical Works",content:"<p>Electrical installation services.</p><ul><li>HT/LT Works</li><li>Cable Laying</li><li>Panels</li></ul>"},
+"plumbing":{title:"Industrial Plumbing",content:"<p>Industrial plumbing solutions.</p><ul><li>Piping</li><li>Water Supply</li><li>Drainage</li></ul>"},
+"hvac":{title:"HVAC Coordination",content:"<p>HVAC installation and coordination.</p><ul><li>Ducting</li><li>Ventilation</li><li>AHU</li></ul>"},
+"ppe":{title:"Safety Signages & PPE Planning",content:"<p>Workplace safety planning.</p><ul><li>Safety Boards</li><li>PPE Planning</li><li>Emergency Layouts</li></ul>"}
+};
+document.querySelectorAll(".service-card").forEach(card=>{
+card.onclick=()=>{
+document.querySelectorAll(".service-card").forEach(c=>c.classList.remove("active"));
+card.classList.add("active");
+const s=services[card.dataset.service];
+document.getElementById("serviceTitle").innerHTML=s.title;
+document.getElementById("serviceContent").innerHTML=s.content;
+document.getElementById("serviceDetails").classList.remove("d-none");
+document.getElementById("serviceDetails").scrollIntoView({behavior:"smooth",block:"start"});
+};
+});
+</script>
+
 </body>
 </html>
