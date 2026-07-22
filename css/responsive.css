@@ -10,23 +10,26 @@
     .mega-menu-dropdown:hover .mega-menu-container {
         display: none; /* Hide hover mega menu on mobile/tablets */
     }
-    
+
     .mega-menu-container {
         position: static;
+        width: 100%;      /* reset the desktop 18% width */
+        left: auto;        /* reset desktop offsets */
+        right: auto;
         box-shadow: none;
         border: none;
         padding: 1rem 0;
         display: none;
     }
-    
+
     .mega-menu-container.show {
-        display: block;
+        display: block !important; /* wins over the :hover rule's higher specificity */
     }
-    
+
     .nav-link.active::after {
-        display: none; /* Hide bottom line active indicator on mobile */
+        display: none;
     }
-    
+
     .nav-link {
         padding: 0.75rem 1rem !important;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
