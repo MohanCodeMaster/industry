@@ -359,3 +359,415 @@ footer a:hover {
     color: var(--secondary-color);
     padding-left: 5px;
 }
+
+/* ==========================================================================
+   About Page Enhancements (#4e5d78 Theme & Custom Sections)
+   ========================================================================== */
+
+:root {
+    --primary-4e5d78: #4e5d78;
+    --primary-4e5d78-hover: #3d4a61;
+}
+
+/* Custom Text and Utility Colors */
+.text-theme-primary {
+    color: #4e5d78 !important;
+}
+
+.bg-theme-soft {
+    background-color: #f5f7fa !important;
+}
+
+/* Section Header Badges and Accents */
+.section-subtitle {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: #4e5d78;
+    text-transform: uppercase;
+}
+
+.section-accent-line {
+    width: 60px;
+    height: 4px;
+    background: #4e5d78;
+    border-radius: 2px;
+    margin: 1rem auto 0 auto;
+}
+
+/* 1. Awards & Certifications Continuous Marquee */
+.awards-slider-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.awards-slider-wrapper::before,
+.awards-slider-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.awards-slider-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #f5f7fa 0%, rgba(245, 247, 250, 0) 100%);
+}
+
+.awards-slider-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #f5f7fa 0%, rgba(245, 247, 250, 0) 100%);
+}
+
+.awards-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: awardsMarquee 30s linear infinite;
+}
+
+.awards-slider-wrapper:hover .awards-track {
+    animation-play-state: paused;
+}
+
+@keyframes awardsMarquee {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.award-card {
+    background: #ffffff;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 20px rgba(78, 93, 120, 0.08);
+    border: 1px solid rgba(78, 93, 120, 0.1);
+    padding: 1.25rem 1.75rem;
+    min-width: 250px;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    transition: all 0.3s ease;
+}
+
+.award-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(78, 93, 120, 0.15);
+    border-color: #4e5d78;
+}
+
+.award-icon-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    background: rgba(78, 93, 120, 0.08);
+    color: #4e5d78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.award-card:hover .award-icon-box {
+    background: #4e5d78;
+    color: #ffffff;
+}
+
+.award-info h6 {
+    color: #4e5d78;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.15rem;
+}
+
+.award-info span {
+    font-size: 0.8125rem;
+    color: #747781;
+    font-weight: 500;
+}
+
+/* 2. Our Team Cards */
+.team-card {
+    background: #ffffff;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 6px 24px rgba(78, 93, 120, 0.08);
+    border: 1px solid rgba(78, 93, 120, 0.08);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.35s ease;
+    height: 100%;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(78, 93, 120, 0.16);
+    border-color: rgba(78, 93, 120, 0.25);
+}
+
+.team-img-wrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 1.5rem;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(78, 93, 120, 0.15);
+    position: relative;
+}
+
+.team-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-img {
+    transform: scale(1.1);
+}
+
+.team-card h4 {
+    color: #4e5d78;
+    font-weight: 700;
+    font-size: 1.35rem;
+    margin-bottom: 0.25rem;
+}
+
+.team-role {
+    display: inline-block;
+    color: #4e5d78;
+    font-weight: 600;
+    font-size: 0.875rem;
+    background: rgba(78, 93, 120, 0.08);
+    padding: 0.3rem 0.9rem;
+    border-radius: 20px;
+    margin-bottom: 1.25rem;
+}
+
+.team-desc {
+    color: #747781;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.team-socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.social-icon-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(78, 93, 120, 0.08);
+    color: #4e5d78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-icon-btn:hover {
+    background: #4e5d78;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* 3. Our Clients Grid */
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+}
+
+@media (max-width: 1199px) {
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.client-card {
+    background: #ffffff;
+    border-radius: var(--border-radius-lg);
+    box-shadow: 0 4px 18px rgba(78, 93, 120, 0.06);
+    border: 1px solid rgba(78, 93, 120, 0.08);
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    transition: all 0.35s ease;
+}
+
+.client-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 14px 30px rgba(78, 93, 120, 0.15);
+    border-color: #4e5d78;
+}
+
+.client-logo-text {
+    font-family: var(--font-heading);
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #4e5d78;
+    letter-spacing: -0.5px;
+    transition: color 0.3s ease;
+}
+
+.client-card:hover .client-logo-text {
+    color: #3d4a61;
+}
+
+/* 4. Testimonials Carousel */
+.testimonial-card {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 32px rgba(78, 93, 120, 0.08);
+    border: 1px solid rgba(78, 93, 120, 0.08);
+    padding: 3rem 2.5rem;
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+#testimonialCarousel .carousel-item {
+    transition: opacity 0.5s ease-in-out;
+    background-color: #ffffff;
+}
+
+.quote-icon {
+    font-size: 3.5rem;
+    color: #4e5d78;
+    opacity: 0.25;
+    line-height: 1;
+    margin-bottom: 1rem;
+}
+
+.testimonial-text {
+    font-size: 1.125rem;
+    color: #4a5568;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.client-profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.client-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.client-info h5 {
+    color: #4e5d78;
+    font-weight: 700;
+    font-size: 1.1rem;
+    margin-bottom: 0.15rem;
+}
+
+.client-info span {
+    font-size: 0.85rem;
+    color: #747781;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Custom Carousel Controls & Indicators */
+.carousel-indicators-custom {
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.carousel-indicators-custom [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    border: none;
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+.carousel-indicators-custom .active {
+    width: 32px;
+    border-radius: 6px;
+    background-color: #4e5d78;
+}
+
+.carousel-btn-custom {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 14px rgba(78, 93, 120, 0.12);
+    border: 1px solid rgba(78, 93, 120, 0.15);
+    color: #4e5d78;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    transition: all 0.3s ease;
+    opacity: 0.85;
+}
+
+.carousel-btn-custom:hover {
+    background-color: #4e5d78;
+    color: #ffffff;
+    opacity: 1;
+    box-shadow: 0 6px 20px rgba(78, 93, 120, 0.25);
+}
+
+.carousel-btn-prev {
+    left: 0;
+}
+
+.carousel-btn-next {
+    right: 0;
+}
+
+@media (max-width: 991px) {
+    .testimonial-card {
+        padding: 2rem 1.5rem;
+    }
+    .carousel-btn-custom {
+        display: none;
+    }
+}
+
