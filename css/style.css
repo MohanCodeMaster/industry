@@ -791,7 +791,8 @@ footer a:hover {
     }
  
     #fb-products .fb-slider-wrapper--rtl .fb-track {
-        animation: fb-scroll-rtl 34s linear infinite;
+        /* animation: fb-scroll-rtl 34s linear infinite; */
+        animation: fb-scroll-ltr 34s linear infinite;
     }
  
     #fb-products .fb-slider-wrapper--ltr .fb-track {
